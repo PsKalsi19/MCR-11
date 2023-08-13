@@ -1,7 +1,7 @@
 
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
-import AppLayout from './laylout/appLayout'
+import AppLayout from './laylout/AppLayout'
 import Dashboard from './components/Dashboard'
 import Watchlist from './components/Watchlist'
 import Starred from './components/Starred'
