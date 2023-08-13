@@ -6,6 +6,7 @@ import Dashboard from './components/Dashboard'
 import Watchlist from './components/Watchlist'
 import Starred from './components/Starred'
 import Details from './components/Details'
+import AddMovie from './components/AddMovie'
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Route path='watchlist' element={<Watchlist />} />
         <Route path='starred' element={<Starred />} />
         <Route path='details/:id' element={<Details />} />
+        <Route path='add-movie' element={<AddMovie/>} />
       </Route>
     </Routes>
   )

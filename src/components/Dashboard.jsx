@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AppContext } from "../context/AppProvider";
 import MovieCard from './MovieCard';
 import ACTIONS from "../context/Actions";
+import { Link } from "react-router-dom";
 
 const Dashboard = () => {
     const { appData: { moviesData, searchText, selectedYear, selectedGenre, selectedRating }, dispatchApp } = useContext(AppContext)
@@ -55,7 +56,7 @@ const Dashboard = () => {
                         filtersData?.ratings && [... new Set(filtersData?.ratings)].map(rating => <option key={rating} value={rating}>{rating}</option>)
                     }
                 </select>
-                <button className="px-4 py-2 text-white rounded-md bg-stone-800 hover:bg-stone-700">Add a Movie</button>
+                <Link to={`add-movie`} className="px-4 py-2 text-white rounded-md bg-stone-800 hover:bg-stone-700">Add a Movie</Link>
             </div>
             <div className="grid grid-cols-2 gap-16 lg:grid-cols-4">
                 {
