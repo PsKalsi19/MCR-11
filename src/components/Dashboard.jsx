@@ -23,11 +23,11 @@ const Dashboard = () => {
             data = data.filter(ele => ele.genre.some(category => category.includes(selectedGenre)))
         }
         if (selectedRating) {
-            data = data.filter(ele => ele.rating === (+selectedRating))
+            data = data.filter(ele => Number(ele.rating) === Number(selectedRating))
         }
 
         if (selectedYear) {
-            data = data.filter(ele => ele.year === (+selectedYear))
+            data = data.filter(ele => Number(ele.year) === Number(selectedYear))
         }
 
         return data

@@ -19,7 +19,7 @@ const AddMovie = () => {
     const [movie, setMovie] = useState(movieInitial)
 
     const addNewMovie = (e) => {
-        const defaultImgUrl = "https://source.unsplash.com/random/900x700/?movie"
+        const defaultImgUrl = "https://source.unsplash.com/random/900x700/?random"
         e.preventDefault()
 
         const finalData = [...moviesData, {
@@ -57,7 +57,7 @@ const AddMovie = () => {
                 </div>
                 <div className="flex flex-col">
                     <label className="my-2 text-sm font-semibold tracking-normal text-gray-500" htmlFor="Year">Year:</label>
-                    <input type="number" min={1900} onChange={handleChange} value={movie.year} className="p-2 border rounded bg-gray-50" name="year" />
+                    <input type="number" min={1990} max={2023} onChange={handleChange} value={movie.year} className="p-2 border rounded bg-gray-50" name="year" />
 
                 </div>
 
